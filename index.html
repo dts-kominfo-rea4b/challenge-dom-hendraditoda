@@ -28,7 +28,7 @@
     <button id="todo-submit">Submit</button>
     <!-- Section output -->
     <!-- TODO: Buatlah sebuah <ul> dengan id todo-output -->
-    <ul class="list-item" id="todo-output">
+    <ul id="todo-output">
 
     </ul>
   </div>
@@ -54,14 +54,13 @@
     // TODO: register event onclick / addEventListener untuk button
     // akan menjalankan fungsi fnClickHandler
     button.addEventListener('click', (event) => {
-      console.log(event);
       fnClickHandler(event);
     });
 
     // TODO: register event onkeypress / addEventListener untuk input
     // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
 
-    input.addEventListener('keyup', (event) => {
+    input.addEventListener('keypress', (event) => {
       if (event.key.toLowerCase() === 'Enter'.toLowerCase()) {
         fnClickHandler(event);
       }
